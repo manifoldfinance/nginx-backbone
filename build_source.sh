@@ -1,5 +1,7 @@
 #!/bin/bash
-mkdir /opt/src \
+set -euo pipefail
+
+mkdir -p /opt/src \
   && curl -L http://nginx.org/download/nginx-1.18.0.tar.gz 2> /dev/null > /opt/src/nginx-1.18.0.tar.gz \
   && curl -L https://github.com/vision5/ngx_devel_kit/archive/v0.3.1.tar.gz 2> /dev/null > /opt/src/ngx_devel_kit-0.3.1.tar.gz \
   && curl -L https://github.com/openresty/lua-nginx-module/archive/v0.10.7.tar.gz 2> /dev/null > /opt/src/lua-nginx-module-0.10.19.tar.gz \
